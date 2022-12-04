@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "test-study"
+name = "YouTube Video Downloader"
 version = "0.1.0"
 description = ""
 authors = ["masioware <marcioedumartinez@gmail.com>"]
