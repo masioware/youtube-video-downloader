@@ -4,14 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="{{url_for('static', filename='css/index.css')}}"
+      rel="stylesheet"
+    />
+    <script src="{{url_for('static', filename='javascript/index.js')}}"></script>
     <title>YouTube Video Downloader</title>
   </head>
   <body>
     <h1>YouTube Video Downloader</h1>
     <form action="/download" method="post">
-      <label>URL: </label>
-      <input type="text" name="url" placeholder="Video URL" />
-      <button type="submit">Download</button>
+      <div>
+        <label>URL: </label>
+        <input type="text" name="url" placeholder="Video URL" />
+        <button type="button" onclick="load_video_info()">Load</button>
+      </div>
+      <div>
+        <h3 name="title" hidden></h3>
+        <img
+          name="thumbnail"
+          alt="thumbnail"
+          src=""
+          style="height: 250px"
+          hidden
+        />
+      </div>
+      <div>
+        <label name="lb-length" hidden></label>
+        <label name="lb-resolution" hidden>Resolution: </label>
+        <select name="resolution" hidden></select>
+        <button type="submit" name="submit" hidden>Download</button>
+      </div>
     </form>
   </body>
 </html>
